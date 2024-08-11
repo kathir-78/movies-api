@@ -1,9 +1,11 @@
 import express from "express";
 const app= express();
-import movies from "./routes/movies-routes.js";
+import movies from "./routes/movies.routes.js";
 
 // middleware
-
+app.get('/', (req,res)=>{
+    res.send("welcome to the movie api development");
+})
 app.use('/movies',movies);
 
 console.log("Starting server...");
