@@ -1,4 +1,3 @@
-import express from 'express';
 
 
 export const MovieIndex = (req, res) => {

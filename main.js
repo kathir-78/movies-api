@@ -1,10 +1,13 @@
 import express from "express";
 const app= express();
 import movies from "./routes/movies.routes.js";
+import  connectDB from "./lib/db.js";
 
 // middleware
+
+connectDB();
 app.get('/', (req,res)=>{
-    res.send("welcome to the movie api development");
+    res.json({msg:"welcome to the movie api development"});
 })
 app.use('/movies',movies);
 
