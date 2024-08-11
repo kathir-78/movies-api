@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 // CRUD OPERATIONS 
-app.get('/', (req, res)=>{
+router.get('/', (req, res)=>{
     res.json({msg:'Welcome to movie api development'});
 });
 
