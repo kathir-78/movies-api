@@ -1,2 +1,4 @@
 node_modules
+
+// hide the sensitive information 
 .env
