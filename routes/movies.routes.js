@@ -1,16 +1,19 @@
 import express, { Router } from "express";
-import { MovieCreate, MovieDelete, MovieIndex, MovieUpdate } from "../controllers/movies.controllers.js";
+import { MovieById, MovieCreate, MovieDelete, Moviefind, MovieUpdate } from "../controllers/movies.controllers.js";
+import validateId from "../middleware/validate.js";
 const router = express.Router();
 
 
 
 // CRUD OPERATIONS 
-router.get('/', MovieIndex);
+router.get('/', Moviefind);
 
 router.post('/',MovieCreate);
 
-router.put('/:id',MovieUpdate);
+router.get('/:id',validateId,MovieById);
 
-router.delete('/:id',MovieDelete);
+router.put('/:id',validateId,MovieUpdate);
+
+router.delete('/:id',validateId,MovieDelete);
 
 export default router;

@@ -4,6 +4,9 @@ import movies from "./routes/movies.routes.js";
 import  connectDB from "./lib/db.js";
 
 // middleware
+app.use(express.json()); // for parsing json bodies
+app.use(express.urlencoded({ extended: true })); // For parsing application/x-www-form-urlencoded
+
 
 connectDB();
 app.get('/', (req,res)=>{

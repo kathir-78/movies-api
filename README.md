@@ -1,7 +1,16 @@
-# movie-api
-my first movie api 
+# 
+#  RESTFUL API - MOVIE
 
-## steps to be follow
+1 `crud operations`
 
-1. `Install the npm`
-2. `Add the express`
+2 `using express framework for server creation`
+
+3 `connected mongodb using mongoose`
+
+4 `advanced validation using joi-validator`
+
+5 `MVC architecture are followed`
+
+
+
+
